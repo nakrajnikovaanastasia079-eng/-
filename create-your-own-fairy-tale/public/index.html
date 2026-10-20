@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Создай свою уникальную сказку за несколько секунд.">
+  <title>Создай свою сказку за 10 секунд</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="stars stars-one" aria-hidden="true">✦　·　✧　　·　✦</div>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="На главную"><span class="brand-icon">✧</span> Сказка за 10 секунд</a>
+    <span class="header-note">Твоя фантазия — целый мир</span>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <div class="eyebrow">✨ МАЛЕНЬКОЕ ЧУДО НАЧИНАЕТСЯ ЗДЕСЬ</div>
+      <h1>Создай свою<br><span>собственную сказку</span></h1>
+      <p class="intro">Придумай героя, выбери настроение — и отправляйся в волшебное приключение.</p>
+      <div class="book-illustration" aria-hidden="true">
+        <div class="moon"></div><div class="castle">♜</div><div class="open-book">📖</div>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
+      </div>
+      <div class="feature-row">
+        <span>🌟 Свои герои</span><span>🪄 Волшебные сюжеты</span><span>💜 Добрые финалы</span>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="form-title">
+      <div class="card-heading">
+        <div class="heading-icon">🪄</div>
+        <div><h2 id="form-title">Твоя история</h2><p>Заполни несколько деталей</p></div>
+      </div>
+      <form id="story-form">
+        <label for="hero">Как зовут главного героя?</label>
+        <input id="hero" name="hero" maxlength="60" placeholder="Например, принцесса Амина" required>
+
+        <div class="form-grid">
+          <div>
+            <label for="genre">Жанр сказки</label>
+            <select id="genre" name="genre">
+              <option>Волшебная</option><option>Приключенческая</option><option>Смешная</option>
+              <option>О дружбе</option><option>Фантастическая</option><option>О животных</option>
+            </select>
+          </div>
+          <div>
+            <label for="age">Возраст читателя</label>
+            <select id="age" name="age">
+              <option>3–5 лет</option><option selected>6–9 лет</option><option>10–12 лет</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="topic">О чём будет сказка? <span class="optional">необязательно</span></label>
+        <textarea id="topic" name="topic" rows="3" maxlength="300" placeholder="Например, о звезде, которая потеряла дорогу домой"></textarea>
+        <button class="primary-button" type="submit"><span>✨</span> Создать сказку <span aria-hidden="true">→</span></button>
+        <p class="privacy-note">История создаётся по твоим идеям. Не вводи личные данные.</p>
+      </form>
+
+      <section id="result-card" class="result-card" hidden aria-live="polite">
+        <div class="result-top"><div><span class="result-label">ТВОЯ НОВАЯ ИСТОРИЯ</span><h2 id="story-title">Волшебная сказка</h2></div><span class="result-icon">📚</span></div>
+        <article id="story-output" class="story-output"></article>
+        <div class="actions">
+          <button id="copy-btn" class="secondary-button" type="button">Копировать</button>
+          <button id="new-btn" class="secondary-button" type="button">Создать новую</button>
+          <button id="save-btn" class="gold-button" type="button">Скачать .txt</button>
+        </div>
+      </section>
+      <p id="status" class="status" role="status"></p>
+    </section>
+  </main>
+  <footer>Сделано с фантазией ✨ <span>«Каждая история начинается с мечты»</span></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
